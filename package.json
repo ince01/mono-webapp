@@ -7,6 +7,20 @@
     "packages/*",
     "shared/*"
   ],
+  "scripts": {
+    "lint:packages": "yarn workspaces foreach run lint",
+    "clean": "rimraf .yarn/build-state.yml && rimraf .yarn/install-state.gz && rimraf **/node_modules && yarn cache clean",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "./{*,{shared,packages/**/*}.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.10.0",
     "@typescript-eslint/parser": "^4.10.0",
@@ -17,6 +31,10 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-promise": "^4.2.1",
-    "prettier": "^2.2.1"
+    "husky": "next",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
   }
 }

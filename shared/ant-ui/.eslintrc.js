@@ -1,3 +1,4 @@
 module.exports = {
-  extends: ['../../.eslintrc.json'],
+  root: true,
+  extends: ['../../.eslintrc.json', 'react-app', 'react-app/jest'],
 };
