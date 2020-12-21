@@ -1,0 +1,12 @@
+**/node_modules/**
+**/dist/**
+**/storybook-static/**
+**/coverage/**
+**/build/**
+**/lib/**
+**/.git/**
+**/public/**
+!.eslintrc
+serviceWorker.js
+**/cypress/**
+.yarn
