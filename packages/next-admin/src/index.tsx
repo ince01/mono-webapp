@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import 'ant-ui/dist/ant_ui_styles.css';
 
 ReactDOM.render(
   <StrictMode>
